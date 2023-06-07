@@ -1,33 +1,40 @@
-const navHomeBtn = document.querySelector("#nav-home");
-const navTranslteBtn = document.querySelector("#nav-translate");
-const navSettingsBtn = document.querySelector("#nav-settings");
+const signText = document.querySelector('.player-view')
+const normText = document.querySelector('#player-text')
+
+const textArea = document.querySelector('#text-area')
+
+const msgInput = document.querySelector('.message-input')
+const sendBtn = document.querySelector('#send-btn')
+
+msgInput.value = 'signguage'
+
+let newText = "";
+sendBtn.addEventListener('click', function() {
+    textArea.innerHTML = ''
+    let text = msgInput.value;
+    msgInput.value = ''
 
 
-const translateCard = document.querySelector("#translate-card");
-const learnCard = document.querySelector("#learn-card");
-const contributeCard = document.querySelector("#contribute-card");
-const contactUsCard = document.querySelector("#contact-us-card");
+    for (let i = 0; i < text.length; i++) {
+        setTimeout(function() {
+            signText.innerHTML = text[i]
+            normText.innerHTML = text[i]
 
-//card nav
-translateCard.addEventListener("click", function() {
-    window.location = '/translate';
-})
-learnCard.addEventListener("click", function() {
-    window.location = '/learn';
-})
-contributeCard.addEventListener("click", function() {
-    window.location = 'https://github.com/Syntaaax';
-})
-contactUsCard.addEventListener("click", function() {
-    window.location = '/contact-us';
-})
 
-//bottom nav
-navTranslteBtn.addEventListener("click", function() {
-    window.location = '/translate'
-})
-navSettingsBtn.addEventListener("click", function() {
-    navHomeBtn.classList.remove("active-nav-btn");
-    navSettingsBtn.classList.add("active-nav-btn")
-    window.location = '/settings'
+            const letter = text.charAt(i);
+            const isLastLetter = (i === text.length - 1);
+
+            if (isLastLetter) {
+                newText += letter
+
+
+            } else {
+                newText += letter;
+            }
+
+            textArea.innerHTML = newText;
+
+            console.log(i)
+        }, i * 1000)
+    }
 })

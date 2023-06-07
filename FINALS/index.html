@@ -1,121 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0A7B79" />
+    <title>Home | Singuage</title>
 
-    <!-- required -->
-    <link rel="icon" type="image/png" href="assets/images/signguage-logo.png">
-    <title>Signguage</title>
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
-    <!-- page loader stuff -->
-    <style>
-        #loader {
-            width: 70px;
-            height: 70px;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-    </style>
-    <!-- custom styles -->
-    <link rel="stylesheet" href="style.css">
-    <!-- fonts-import -->
+    <!-- GOOGLE FONTS(MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-
-    <!-- sw/pwa -->
-    <link rel="manifest" href="manifest.webmanifest" />
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker && navigator.serviceWorker.register("sw.js");
-            });
-        }
-    </script>
-
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    <!-- loader -->
-    <img src="assets/images/signguage-logo.png" id="loader" class="center" alt="loader" srcset="">
-    <!-- top navbar cum header -->
     <nav>
-        <div class="nav-cointainer">
-            <div class="nav-left-content-wrapper">
-                <h2>Welcome</h3>
-                    <h4>Intelligence Senses Company</h4>
-                    <div id="user-name-underline"></div>
-            </div>
-            <div class="nav-right-content-wrapper">
-                <a href="/">
-                    <img id="user-pfp" src="assets/images/demo-pfp.png">
-                    <span class="notification-badge"></span>
-                </a>
-            </div>
+        <div class="container nav__container">
+            <a href="index.html"><h4>SIGNGUAGE</h4></a>
+            <ul class="nav__menu"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="translate.html">Translate</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
         </div>
     </nav>
-    <!-- sanket-heading -->
-    <div class="sanket-heading-cointainer">
-        <h1 id="heading">SIGNGAUGE</h1>
-        <span id="underline"></span>
-        <p id="sub-heading">The Voice Of The Unheard</p>
-    </div>
-    <!-- home-option-cards -->
-    <div class="home-options-wrapper">
-        <div class="row-1">
-            <button class="option-card" id="translate-card">
-                <img src="assets/images/translate-option-btn-img.png" alt="Translate">
-            </button>
-            <button class="option-card" id="learn-card">
-                <img src="assets/images/learn-option-btn-img.png" alt="Learn">
-            </button>
-        </div>
-        <div class="row-2">
-            <button class="option-card" id="contribute-card">
-                <img src="assets/images/contribute-option-btn-img.png" alt="Contribute">
-            </button>
-            <button class="option-card" id="contact-us-card">
-                <img src="assets/images/contact-us-option-btn-img.png" alt="Contact Us">
-            </button>
-        </div>
-    </div>
-    <!-- bottom-nav -->
-    <div class="bottom-nav-bar">
-        <button class="nav-btn active-nav-btn" id="nav-home">
-            <span class="material-symbols-rounded">Home</span>
-            <p>Home</p>
-        </button>
-        <button class="nav-btn" id="nav-translate">
-            <span class="material-symbols-rounded">translate</span>
-            <p>Translate</p>
-        </button>
-        <button class="nav-btn" id="nav-settings">
-            <span class="material-symbols-rounded">settings_suggest</span>
-            <p>Settings</p>
-        </button>
-    </div>
-    <script src="app.js"></script>
-</body>
+    <!--============== END OF NAVBAR ==================-->
 
+
+
+
+    <header>
+        <div class="container header__container">
+            <div class="header__left">
+                <h1>Everyone deserves to have their voice heard, With sign language, deaf people are heard.</h1>
+                <p>
+                    To help deaf people by creating a platform to learn sign language and improve their communication skills. Sign languages are extremely important communication tool and helps them to be part of society.
+                </p>
+                <a href="learn.html" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="header__right">
+                <div class="header__right-image">
+                    <img src="./images/bg.png">
+                </div>
+            </div>
+        </div>
+    </header>
+     <!--============== END OF HEADER ==================-->
+
+     <section class="challenges">
+        <div class="container challenges__container">
+            <div class="challenges__left">
+                <h1>The Challenges</h1>
+                <p>
+                    The Top 6 problems faced by deaf people in the community. Lack of access to language and/or assistive device. Deaf children are often delayed in acquiring and developing their language because they don't get early access to sign language. Children who live in poverty or in rural ares can't afford or get access to technology.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="challenges__right">
+                <article class="challenge">
+                    <span class="challenge__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Support</h5>
+                        <p>Lack of support in the education to train their sign language skills to communicate with other people.</p>
+                </article>
+
+                <article class="challenge">
+                    <span class="challenge__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Communication</h5>
+                        <p>Lack of skills to communicate with other people because of misunderstanding.</p>
+                </article>
+
+                <article class="challenge">
+                    <span class="challenge__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Discrimination</h5>
+                        <p> Cannot participate in the group of peers because of criticism.</p>
+                </article>
+
+                <article class="challenge">
+                    <span class="challenge__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Poverty</h5>
+                        <p> Cannot provide their education because of lack of financial support.</p>
+                </article>
+
+                <article class="challenge">
+                    <span class="challenge__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Social</h5>
+                        <p> Cannot participate in the community because of judgments.</p>
+                </article>
+
+                <article class="challenge">
+                    <span class="challenge__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Accessibility</h5>
+                        <p> Cannot access in the job of this country because of racist people.</p>
+                </article>
+            </div>
+        </div>
+     </section>
+<!--============== END OF CHALLENGES ==================-->
+
+
+
+    <section class="solutions">
+        <h2>Our Solutions</h2>
+        <div class="container solutions__container">
+            <article class="solution">
+                <div class="solution__image">
+                    <img src="./images/img1.jpg">
+                </div>
+                <div class="solution__info">
+                    <h4> FAMILY SUPPORT TEAMS</h4>
+                <p>
+                    Set up a family support to work with deaf children and their families in their homes.
+                </p>
+                <a href="learn.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+
+            <article class="solution">
+                <div class="solution__image">
+                    <img src="./images/img2.png">
+                </div>
+                <div class="solution__info">
+                    <h4> TRAIN AND WORKSHOPS</h4>
+                <p>
+                    Train the families, deaf mentors, preschool teachers and sign language interpreters.
+                </p>
+                <a href="learn.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+
+            <article class="solution">
+                <div class="solution__image">
+                    <img src="./images/img3.jpg">
+                </div>
+                <div class="solution__info">
+                    <h4> USE SIGN LANGUAGE</h4>
+                <p>
+                    Learn sign language as the primary mode of communication of deaf people.
+                </p>
+                <a href="learn.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!--============== END OF SOLUTIONS ==================-->
+
+
+
+
+    <section class="faqs">
+        <h2>Frequently Asked Question</h2>
+        <div class="container faqs__container">
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Can deaf people communicate without sign language?</h4>
+                    <p>
+                        Common visual communication modes include American Sign Language (ASL), cued speech, lip speech reading and gestures. 
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Can deaf people use sign language?</h4>
+                    <p>
+                        Sign language allows people who are deaf or hard of hearing to enjoy rights just like anyone else, they are able to learn, work, and socialize. Sign language uses hand positions and movement to communicate and has existed for centuries. 
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Why do deaf people prefer sign language?</h4>
+                    <p>
+                        Sign languages are an extremely important communication tool for many deaf and hard-of-hearing people. Sign languages are the native languages of the Deaf community and provide full access to communication.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Is there a Filipino sign language?</h4>
+                    <p>
+                        Filipino Sign Language (FSL) or Philippine Sign Language (Filipino: Wikang pasenyas ng mga Pilipino), is a sign language originating in the Philippines. Like other sign languages, FSL is a unique language with its own grammar, syntax and morphology; it is neither based on nor resembles Filipino or English.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What is the history of sign language in the Philippines?</h4>
+                    <p>
+                        Filipino Sign Language is a signed language that is mostly based on American Sign Language, which was introduced into the country after the Spanish-American War ended in 1899. The first school was started for the Deaf and Blind about 1907 by Miss Delight Rice.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>How do deaf people communicate if they don t know sign language?</h4>
+                    <p>
+                        Deaf children naturally pick up lip-reading. Those who develop deafness later in life are more likely to rely on lip-reading, rather than sign language, as they are more used to and aware of seeing oral speech patterns.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What are the barriers faced by the deaf community?</h4>
+                    <p>
+                        Deaf children are often delayed in acquiring and developing their language because they don't get early access to sign language. Children who live in poverty or in rural areas can't afford or get access to technology such as hearing aids.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What are two issues that may be of concern to individuals within the deaf culture?</h4>
+                    <p>
+                        Studies reveal that deaf people are around twice as likely to suffer from psychological problems such as depression and anxiety. Research suggests this stems from feelings of isolation. Making matters worse, the most effective treatment for these types of issues is usually talking with a therapist.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What challenges do deaf people have when working?</h4>
+                    <p>
+                        Once hired, deaf workers may become discouraged because the people around them do not know how best to communicate with them. They may feel isolated and keep to themselves while at work. Many coworkers have never worked with a deaf person before, so they may feel awkward and unsure about how to approach deaf people
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>How is the deaf community discriminated against?</h4>
+                    <p>
+                        People who are deaf or hard of hearing are often excluded from their communities, denied equal access to basic services and face stigma and violence. Students who are deaf are uprooted from families and communities because their school doesn't offer instruction in sign language.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!--============== END OF FAQs ==================-->
+
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>Signguage</h4></a>
+                <p>
+                    This is a learning educational webpage showing the support for awareness in deaf community through learn and quiz.
+                </p>
+            </div>
+
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Security Access</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer__copyright">
+                 <small>Copyright &copy; Intelligent Senses Company</small>
+            </div>
+        </div>
+    </footer>
+
+
+<script src="./main.js"></script>
+
+</body>
 </html>

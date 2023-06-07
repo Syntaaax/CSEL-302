@@ -1,4 +1,3 @@
-/* root color variables+values */
 :root {
     --ultraLightGreen: #D3F1E9;
     --lightGreen: #BCF3E5;
@@ -8,18 +7,21 @@
     --navyBlue: #193053;
 }
 
-/* font face */
 @font-face {
     font-family: "Poppins";
-    src: url("./assets/fonts/Poppins-Regular.ttf");
+    src: url("/fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
     font-family: "Aclonica";
-    src: url("./assets/fonts/Aclonica-Regular.ttf");
+    src: url("/fonts/Aclonica-Regular.ttf");
 }
 
-/* global styles */
+@font-face {
+    font-family: "isl";
+    src: url("/fonts/IndianSignLangage.ttf");
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     padding: 0;
@@ -28,186 +30,135 @@
 }
 
 body {
-    background-color: var(--ultraLightGreen) !important;
-    min-height: 100vh;
-}
-
-/* top navbar header */
-.nav-cointainer {
-    margin-top: 20px;
+    font-family: 'Poppins';
+    background-color: var(--brightGreen) !important;
     display: flex;
-    flex-wrap: nowrap;
-    align-content: space-between;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center
 }
 
-.nav-left-content-wrapper {
-    margin-right: 3rem;
-    text-align: left;
-}
-
-.nav-left-content-wrapper h2 {
-    text-align: left;
-    font-family: 'Poppins', sans-serif;
-    font-weight: medium;
-    font-size: 1.5rem;
-    color: var(--deepGreen);
-}
-
-.nav-left-content-wrapper h4 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--navyBlue);
-}
-
-/* #user-name-underline */
-.nav-right-content-wrapper {
-    position: relative;
-}
-
-#user-pfp {
-    display: inline-block;
-    position: relative;
-    margin-left: 3rem;
-    max-width: 2.5rem;
-    border: var(--mediumGreen) solid 3px;
-    border-radius: 50%;
+#back-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     cursor: pointer;
 }
 
-.notification-badge {
+h1 {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: -1px;
-    right: 2px;
-    background: red;
-    color: white;
-    border-radius: 50%;
-    border: 1px solid var(--lightGreen);
+    margin: auto;
+    top: 0.4rem;
+    color: var(--navyBlue);
+    font-family: "Poppins";
+    font-size: 2rem;
 }
 
-/* signguage heading */
-.signguage-heading-cointainer {
-    margin-top: 2.3rem;
+.wrapper {
+    margin-top: 4.5rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    width: 85%;
+    height: 13rem;
+    border: 2px solid var(--navyBlue);
+    border-radius: 18px;
 }
 
-.signguage-heading-cointainer h1 {
-    font-family: 'Aclonica', sans-serif;
+.player-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'isl';
+    font-size: 8rem;
+}
+
+.player-view span {
     font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--deepGreen);
 }
 
-/* .signguage-heading-cointainer span */
-.signguage-heading-cointainer p {
-    margin-top: 3px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.6rem;
-    font-weight: 600;
-    color: var(--deepGreen);
+#player-text {
+    font-size: 2rem;
+    margin: auto;
 }
 
-/* home option cards */
-.home-options-wrapper {
-margin: auto;
-    margin-top: 2rem;
-    width: 100%;
-    min-height: 80%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
+#text-area {
+    text-decoration: none;
+    width: 80%;
+    height: 9rem;
+    position: fixed;
+    bottom: 6rem;
+    border: 2px solid var(--navyBlue);
+    border-radius: 18px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
+    overflow: auto;
+    font-size: 1.52rem;
+}
+
+.line {
+    color: rgba(25, 48, 83, 0.4);
+    font-size: 28px;
+    padding-top: 7px;
+    padding-left: 15px;
+}
+
+#last-line {
+    color: var(--navyBlue);
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+}
+
+.message-container {
+    position: fixed;
+    margin: auto;
+    bottom: 0;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5rem;
+    border: 2px solid var(--navyBlue);
+    margin-bottom: 1rem;
+}
+
+.message-input {
+    width: 50%;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--navyBlue);
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.send-btn {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
 }
 
-.option-card {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-.option-card img {
-    width: 9rem;
-    height: 11rem;
-}
-
-.option-card {
+.send-icon {
     display: inline-block;
-    border: none;
-    background-color: var(--mediumGreen);
-    border-radius: 18px;
-    transition: background-color 0.25s ease;
-}
-
-.option-card:active {
-    height: 11rem;
-    box-shadow: none;
-    transform: translateY(2px);
-}
-
-#option-card-3 {
-    border: none;
-    background-color: none;
-}
-
-/* bottom navbar */
-.bottom-nav-bar {
-    position: fixed;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 0;
-    width: 100%;
-    background: var(--lightGreen);
-    border-top: 3px solid rgba(1, 157, 146, 0.3);
-    padding-top: 7px;
-}
-
-.nav-btn {
-    display: inline-block;
-    left: 0;
-    border: none;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    border-radius: 50%;
     text-align: center;
-    color: var(--navyBlue);
-    background-color: var(--lightGreen);
-}
-
-.nav-btn span {
-    border-radius: 18px;
-    padding: 2px 15px 2px 15px;
-}
-
-.nav-btn p {
-    font-size: 0.7rem;
-    font-weight: 500;
-}
-
-.active-nav-btn span {
-    background-color: var(--brightGreen);
-}
-
-/* media queries DESKTOP */
-@media only screen and (min-width: 1080px) {
-    .option-card {
-        cursor: pointer;
-    }
-    .nav-btn {
-        cursor: pointer;
-    }
-    .home-options-wrapper {
-        display: flex;
-        flex-direction: row;
-    }
-    .option-card:hover {
-        background-color: #193053;
-    }
+    line-height: 24px;
+    font-size: 14px;
 }

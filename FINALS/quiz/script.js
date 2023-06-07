@@ -11,16 +11,33 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const canvas = document.querySelector("#my-canvas");
 
+var backgroundAudio = new Audio('quiz-bg.mp3');
 var audio = new Audio('applause.mp3');
+
+// Play background music
+function playBackgroundMusic(){
+    backgroundAudio.loop = true;
+    backgroundAudio.play();
+}
+
+// Pause background music
+function pauseBackgroundMusic() {
+    backgroundAudio.pause();
+}
+
+// Play background music when the page loads
+window.addEventListener('load', playBackgroundMusic);
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
+    playBackgroundMusic(); // Play background music
 }
 
 // if exitQuiz button clicked
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
+    backgroundAudio.pause(); // Pause background music
 }
 
 // if continueQuiz button clicked
@@ -32,6 +49,20 @@ continue_btn.onclick = ()=>{
     startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
 }
+
+// Function to check if quiz box is active
+function isQuizBoxActive() {
+    return quiz_box.classList.contains("activeQuiz");
+  }
+  
+  // Event listener to play/pause background music when quiz box becomes active/inactive
+  quiz_box.addEventListener("transitionend", function () {
+    if (isQuizBoxActive()) {
+      playBackgroundMusic(); // Play background music
+    } else {
+      pauseBackgroundMusic(); // Pause background music
+    }
+});
 
 let timeValue =  15;
 let que_count = 0;
